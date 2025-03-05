@@ -23,9 +23,9 @@ const ContactForm = () => {
     var emailBody = "Name: " + values.fullName + "\n\n";
     emailBody += "Email: " + values.email + "\n\n";
     emailBody += "Phone: " + values.phone + "\n\n";
+    emailBody += "Service: " + values.service + "\n\n";
     emailBody += "Message:\n" + values.message;
 
-    // Construct the request payload
     var payload = {
       to: companyDetails.email,
       name: "Skylytics",
@@ -150,6 +150,26 @@ const ContactForm = () => {
             />
             {errors.phone && (
               <p className="text-red-500 text-sm">{errors.phone.message}</p>
+            )}
+          </div>
+          <div>
+            <select
+              className="w-full p-2 bg-primary-5 outline-none"
+              {...register("service", { required: "Please select a service" })}
+            >
+              <option value="">Select a Service*</option>
+              <option>Custom Software Development</option>
+              <option>Full-Stack Web Development</option>
+              <option>Mobile App Development</option>
+              <option>AI Solutions & Machine Learning</option>
+              <option>Robotic Process Automation (RPA)</option>
+              <option>Chatbot Development</option>
+              <option>Blockchain Development</option>
+              <option>Data Analytics & Business Intelligence</option>
+              <option>Cloud Computing Services</option>
+            </select>
+            {errors.service && (
+              <p className="text-red-500 text-sm">{errors.service.message}</p>
             )}
           </div>
           <div>

@@ -50,7 +50,7 @@ import { AiFillAppstore } from "react-icons/ai";
 export { logo };
 
 export const companyDetails = {
-  email: "SKYLYTICStechnologies@gmail.com",
+  email: "skylyticstechnologies@gmail.com",
   // email: "remeesreme4u@gmail.com",
   phone: "+91-9686612171",
   address:

@@ -21,9 +21,9 @@ const ContactForm2 = () => {
     var emailBody = "Name: " + values.fullName + "\n\n";
     emailBody += "Email: " + values.email + "\n\n";
     emailBody += "Phone: " + values.phone + "\n\n";
+    emailBody += "Service: " + values.service + "\n\n";
     emailBody += "Message:\n" + values.message;
 
-    // Construct the request payload
     var payload = {
       to: companyDetails.email,
       name: "Skylytics",
@@ -81,7 +81,10 @@ const ContactForm2 = () => {
             placeholder="Email Address"
             {...register("email", {
               required: "Email is required",
-              pattern: /^\S+@\S+\.\S+$/,
+              pattern: {
+                value: /^\S+@\S+\.\S+$/,
+                message: "Invalid email address",
+              },
             })}
             className="p-2 outline-none bg-primary/10 rounded w-full"
           />
@@ -96,12 +99,47 @@ const ContactForm2 = () => {
           placeholder="Phone Number"
           {...register("phone", {
             required: "Phone number is required",
-            minLength: 10,
+            minLength: {
+              value: 10,
+              message: "Phone number must be at least 10 digits",
+            },
           })}
           className="p-2 outline-none bg-primary/10 rounded w-full"
         />
         {errors.phone && (
           <p className="text-red-500 text-sm">{errors.phone.message}</p>
+        )}
+      </div>
+      <div>
+        <select
+          {...register("service", { required: "Please select a service" })}
+          className="p-2 outline-none bg-primary/10 rounded w-full"
+        >
+          <option value="">Select a Service</option>
+          <option value="Custom Software Development">
+            Custom Software Development
+          </option>
+          <option value="Full-Stack Web Development">
+            Full-Stack Web Development
+          </option>
+          <option value="Mobile App Development">Mobile App Development</option>
+          <option value="AI Solutions & Machine Learning">
+            AI Solutions & Machine Learning
+          </option>
+          <option value="Robotic Process Automation (RPA)">
+            Robotic Process Automation (RPA)
+          </option>
+          <option value="Chatbot Development">Chatbot Development</option>
+          <option value="Blockchain Development">Blockchain Development</option>
+          <option value="Data Analytics & Business Intelligence">
+            Data Analytics & Business Intelligence
+          </option>
+          <option value="Cloud Computing Services">
+            Cloud Computing Services
+          </option>
+        </select>
+        {errors.service && (
+          <p className="text-red-500 text-sm">{errors.service.message}</p>
         )}
       </div>
       <div>
