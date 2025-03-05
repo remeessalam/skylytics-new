@@ -77,14 +77,14 @@ const PortfolioList = () => {
             >
               <img src={item.img} alt="" />
               <h3 className="text-lg font-medium text-center">{item.title}</h3>
-              {/* <Link
+              <Link
                 target="_blank"
                 to={item.link}
                 className="flex items-center gap-2 hover:underline"
               >
                 <IoIosLink />
                 <small>Visit</small>
-              </Link> */}
+              </Link>
             </div>
           ))}
         </div>

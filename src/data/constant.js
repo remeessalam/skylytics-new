@@ -59,6 +59,8 @@ export const companyDetails = {
   x: "https://x.com/Skylytics",
   facebook: "https://www.facebook.com/",
   linkedin: "https://www.linkedin.com/",
+  whatsapplink:
+    "https://api.whatsapp.com/send/?phone=9686612171&text&type=phone_number&app_absent=0",
 };
 
 export const navItems = [
