@@ -1,12 +1,37 @@
 import logo from "../assets/logo/logo.png";
 
+// porfolio image
+// Import all images at the top (Web Development)
+import FiveGHomesImg from "../assets/web-development-portfolio/5ghomes.png";
+import BayutImg from "../assets/web-development-portfolio/bayut.png";
+import ColdCreekcapImg from "../assets/web-development-portfolio/cold creekcap.png";
+import EmergencyMusicImg from "../assets/web-development-portfolio/emergency music .png";
+import FlatiornImg from "../assets/web-development-portfolio/flatiorn.png";
+import MavenImg from "../assets/web-development-portfolio/maven.png";
+import MenissaCateringsImg from "../assets/web-development-portfolio/menissa caterings.png";
+import MethodistImg from "../assets/web-development-portfolio/methodist.png";
+import ThinkRealityImg from "../assets/web-development-portfolio/think reality.png";
+
+// Import all images at the top (App Development)
+import DubaiTravelGuideImg from "../assets/app-development-portfolio/dubai travel guide.png";
+import EloraHairPalourImg from "../assets/app-development-portfolio/elora hair palour.png";
+import EvansFrancisImg from "../assets/app-development-portfolio/evans francis.png";
+import HouseOfDeliverenceImg from "../assets/app-development-portfolio/house of deliverence.png";
+import MybitsShopImg from "../assets/app-development-portfolio/mybitsshop.png";
+import NamazImg from "../assets/app-development-portfolio/namaz.png";
+import PoteaImg from "../assets/app-development-portfolio/potea.png";
+import RentopBikeAndCarImg from "../assets/app-development-portfolio/rentop bike and car.png";
+
 // services icons (website)
-import { ReactComponent as icon1 } from "../assets/svg/services/AI Development.svg";
-import { ReactComponent as icon2 } from "../assets/svg/services/Web Development.svg";
-import { ReactComponent as icon3 } from "../assets/svg/services/App Development.svg";
-import { ReactComponent as icon4 } from "../assets/svg/services/Hybrid App Development.svg";
-import { ReactComponent as icon5 } from "../assets/svg/services/IT consultancy and strategy.svg";
-import { ReactComponent as icon6 } from "../assets/svg/services/IT Infrastructure.svg";
+import { ReactComponent as icon1 } from "../assets/svg/services/custome.svg";
+import { ReactComponent as icon2 } from "../assets/svg/services/web.svg";
+import { ReactComponent as icon3 } from "../assets/svg/services/app.svg";
+import { ReactComponent as icon4 } from "../assets/svg/services/aiml.svg";
+import { ReactComponent as icon5 } from "../assets/svg/services/rpa.svg";
+import { ReactComponent as icon6 } from "../assets/svg/services/chatbot.svg";
+import { ReactComponent as icon7 } from "../assets/svg/services/blockchain.svg";
+import { ReactComponent as icon8 } from "../assets/svg/services/data.svg";
+import { ReactComponent as icon9 } from "../assets/svg/services/cloud.svg";
 
 // app development services icons
 import { ReactComponent as appIcon1 } from "../assets/svg/services/iOS App Development.svg";
@@ -129,80 +154,110 @@ export const portfolio = {
     list: [
       {
         id: 1,
-        title: "Barbera",
-        link: "https://play.google.com/store/apps/details?id=app.barbera.io&pcampaignid=web_share",
+        img: DubaiTravelGuideImg,
+        title: "Dubai Travel Guide",
+        link: "https://play.google.com/store/apps/details?id=com.eBps.dubai.travel.guide&pcampaignid=web_share",
       },
       {
         id: 2,
-        title: "Rentop",
-        link: "https://play.google.com/store/apps/details?id=com.rentop&pcampaignid=web_share",
+        img: EloraHairPalourImg,
+        title: "Elora Hair Palour",
+        link: "https://play.google.com/store/apps/details?id=app.barbera.io&pcampaignid=web_share",
       },
       {
         id: 3,
-        title: "Binfoclub",
-        link: "https://play.google.com/store/apps/details?id=com.binfoclub.app&pcampaignid=web_share",
-      },
-      {
-        id: 4,
-        title: "Prayer Times",
-        link: "https://play.google.com/store/apps/details?id=com.iccbrossard.prayerBmes&pcampaignid=web_share",
-      },
-      {
-        id: 5,
+        img: EvansFrancisImg,
         title: "Evans Francis",
         link: "https://play.google.com/store/apps/details?id=com.chrisBanappdevelopers.evansfrancis&pcampaignid=web_share",
       },
       {
-        id: 6,
-        title: "HOD",
+        id: 4,
+        img: HouseOfDeliverenceImg,
+        title: "House of Deliverence",
         link: "https://play.google.com/store/apps/details?id=com.chrisBanappdevelopers.hod&pcampaignid=web_share",
       },
       {
+        id: 5,
+        img: MybitsShopImg,
+        title: "Mybits Shop",
+        link: "https://play.google.com/store/apps/details?id=com.klikomics.android&pcampaignid=web_share",
+      },
+      {
+        id: 6,
+        img: NamazImg,
+        title: "Namaz",
+        link: "https://play.google.com/store/apps/details?id=com.iccbrossard.prayerBmes&pcampaignid=web_share",
+      },
+      {
         id: 7,
-        title: "AutoSnap",
+        img: PoteaImg,
+        title: "Potea",
         link: "https://play.google.com/store/apps/details?id=com.Zigna.AutoSnap&pcampaignid=web_share",
       },
       {
         id: 8,
-        title: "Klikomics",
-        link: "https://play.google.com/store/apps/details?id=com.klikomics.android&pcampaignid=web_share",
-      },
-      {
-        id: 9,
-        title: "Ocxee",
-        link: "https://apps.apple.com/in/app/ocxee/id1522856353",
-      },
-      {
-        id: 10,
-        title: "Dubai Travel Guide",
-        link: "https://play.google.com/store/apps/details?id=com.eBps.dubai.travel.guide&pcampaignid=web_share",
+        img: RentopBikeAndCarImg,
+        title: "Rentop Bike and Car",
+        link: "https://play.google.com/store/apps/details?id=com.rentop&pcampaignid=web_share",
       },
     ],
   },
   webDevelopment: {
     icon: <FaGlobe size={30} />,
     list: [
-      { id: 1, title: "Leaderbridge", link: "https://www.leaderbridge.com" },
-      { id: 2, title: "Autopilot", link: "https://autopilot.io" },
-      { id: 3, title: "Gigzio", link: "https://gigzio.com" },
-      { id: 4, title: "FE Group", link: "https://fe.group" },
-      { id: 5, title: "Vtalkz", link: "https://vtalkz.com" },
-      { id: 6, title: "Think Realty", link: "https://thinkrealty.ae" },
-      { id: 7, title: "Bayut", link: "https://www.bayut.com" },
       {
-        id: 8,
-        title: "5G High Speed Internet",
+        id: 1,
+        img: FiveGHomesImg,
+        title: "5g Homes",
         link: "https://5ghighspeedinternet.co",
       },
       {
-        id: 9,
-        title: "Messina's Catering",
+        id: 2,
+        img: BayutImg,
+        title: "Bayut",
+        link: "https://www.bayut.com",
+      },
+      {
+        id: 3,
+        img: ColdCreekcapImg,
+        title: "Cold Creekcap",
+        link: "https://www.coldcreekcap.com",
+      },
+      {
+        id: 4,
+        img: EmergencyMusicImg,
+        title: "Emergency Music",
+        link: "https://www.figma.com/proto/GwlIMQuIuFevhOEp8moALy/emergence-music-distribuBon?page-id=6298%3A7215&type=design&node-id=6298-7776&viewport=407%2C314%2C0.11&t=QCtz7M4USn6gI1CG-1&scaling=min-zoom",
+      },
+      {
+        id: 5,
+        img: FlatiornImg,
+        title: "Flatiorn",
+        link: "",
+      },
+      {
+        id: 6,
+        img: MavenImg,
+        title: "Maven",
+        link: "",
+      },
+      {
+        id: 7,
+        img: MenissaCateringsImg,
+        title: "Menissa Caterings",
         link: "https://messinascatering.com",
       },
       {
-        id: 10,
-        title: "Cold Creek Capital",
-        link: "https://www.coldcreekcap.com",
+        id: 8,
+        img: MethodistImg,
+        title: "Methodist",
+        link: "",
+      },
+      {
+        id: 9,
+        img: ThinkRealityImg,
+        title: "Think Reality",
+        link: "https://thinkrealty.ae",
       },
     ],
   },
@@ -216,7 +271,7 @@ export const services = [
     icon: icon1,
     desc: "Empower your business with Skylytics's tailored software solutions. From streamlining workflows to building scalable applications, we deliver high-performance software that drives growth and innovation.",
     detailsPage: {
-      banner: require("../assets/images/banners/ai-development.webp"),
+      banner: require("../assets/images/banners/custome.jpg"),
       img1: require("../assets/images/service-details/custome-1.jpg"),
       img2: require("../assets/images/service-details/custome-2.jpg"),
       img3: require("../assets/images/service-details/custome-3.jpg"),
@@ -321,7 +376,7 @@ export const services = [
     icon: icon2,
     desc: "Accelerate your digital transformation with Skylytics’s full-stack web development services. We build dynamic, scalable, and high-performance web applications tailored to your business needs.",
     detailsPage: {
-      banner: require("../assets/images/banners/web-development.webp"),
+      banner: require("../assets/images/banners/web.jpg"),
       img1: require("../assets/images/service-details/web-1.jpg"),
       img2: require("../assets/images/service-details/web-2.jpg"),
       img3: require("../assets/images/service-details/web-3.jpg"),
@@ -428,7 +483,7 @@ export const services = [
     icon: icon3,
     desc: "Take your business to the next level with Skylytics’s innovative app development services. We design and develop mobile applications that deliver seamless experiences, enhance user engagement, and drive growth.",
     detailsPage: {
-      banner: require("../assets/images/banners/app-development.webp"),
+      banner: require("../assets/images/banners/app.jpg"),
       img1: require("../assets/images/service-details/app-dev-1.webp"),
       img2: require("../assets/images/service-details/app-dev-2.webp"),
       img3: require("../assets/images/service-details/app-dev-3.webp"),
@@ -528,7 +583,7 @@ export const services = [
     icon: icon4,
     desc: "Unlock the power of artificial intelligence with Skylytics’s advanced AI solutions and machine learning services. We help businesses automate processes, enhance decision-making, and drive innovation.",
     detailsPage: {
-      banner: require("../assets/images/banners/software-development.webp"),
+      banner: require("../assets/images/banners/aiml.jpg"),
       img1: require("../assets/images/service-details/aiml-1.jpg"),
       img2: require("../assets/images/service-details/aiml-2.jpg"),
       img3: require("../assets/images/service-details/aiml-3.jpg"),
@@ -622,7 +677,7 @@ export const services = [
     icon: icon5,
     desc: "Streamline operations and enhance efficiency with Skylytics’s Robotic Process Automation (RPA) solutions. We help businesses automate repetitive tasks, reduce errors, and boost productivity through intelligent automation.",
     detailsPage: {
-      banner: require("../assets/images/banners/it-consulting.webp"),
+      banner: require("../assets/images/banners/rpa.jpg"),
       img1: require("../assets/images/service-details/rpa-1.jpg"),
       img2: require("../assets/images/service-details/rpa-2.jpg"),
       img3: require("../assets/images/service-details/rpa-3.jpg"),
@@ -725,7 +780,7 @@ export const services = [
     icon: icon6,
     desc: "Enhance customer interactions and automate support with Skylytics’s advanced chatbot development services. We create intelligent, AI-powered chatbots that provide seamless engagement and efficient responses.",
     detailsPage: {
-      banner: require("../assets/images/banners/it-consulting.webp"),
+      banner: require("../assets/images/banners/chatbot.jpg"),
       img1: require("../assets/images/service-details/chatbot-1.jpg"),
       img2: require("../assets/images/service-details/chatbot-2.jpg"),
       img3: require("../assets/images/service-details/chatbot-3.jpg"),
@@ -825,10 +880,10 @@ export const services = [
   {
     id: 7,
     title: "Blockchain Development",
-    icon: icon6,
+    icon: icon7,
     desc: "Revolutionize your business with Skylytics’s cutting-edge blockchain development services. We build secure, decentralized, and scalable blockchain solutions tailored to your industry needs.",
     detailsPage: {
-      banner: require("../assets/images/banners/it-consulting.webp"),
+      banner: require("../assets/images/banners/blockchain.jpg"),
       img1: require("../assets/images/service-details/blockchain-1.jpg"),
       img2: require("../assets/images/service-details/blockchain-2.jpg"),
       img3: require("../assets/images/service-details/blockchain-3.jpg"),
@@ -928,10 +983,10 @@ export const services = [
   {
     id: 8,
     title: "Data Analytics & Business Intelligence",
-    icon: icon6,
+    icon: icon8,
     desc: "Unlock actionable insights with Skylytics’s data analytics and business intelligence solutions. We help businesses make data-driven decisions with advanced analytics, visualization, and AI-powered intelligence.",
     detailsPage: {
-      banner: require("../assets/images/banners/it-consulting.webp"),
+      banner: require("../assets/images/banners/data.jpg"),
       img1: require("../assets/images/service-details/data-1.jpg"),
       img2: require("../assets/images/service-details/data-2.jpg"),
       img3: require("../assets/images/service-details/data-3.jpg"),
@@ -1031,10 +1086,10 @@ export const services = [
   {
     id: 9,
     title: "Cloud Computing Services",
-    icon: icon6,
+    icon: icon9,
     desc: "Leverage the power of the cloud with Skylytics’s cloud computing services. We provide scalable, secure, and cost-effective cloud solutions to help businesses innovate and grow.",
     detailsPage: {
-      banner: require("../assets/images/banners/it-consulting.webp"),
+      banner: require("../assets/images/banners/cloud.jpg"),
       img1: require("../assets/images/service-details/cloud-1.jpg"),
       img2: require("../assets/images/service-details/cloud-2.jpg"),
       img3: require("../assets/images/service-details/cloud-3.jpg"),
