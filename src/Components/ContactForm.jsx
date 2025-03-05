@@ -1,11 +1,64 @@
-import React from "react";
+import React, { useState } from "react";
 import HrLine from "./HrLine";
 import { TiArrowBack } from "react-icons/ti";
 import { ImPhone } from "react-icons/im";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { companyDetails } from "../data/constant";
+import { useForm } from "react-hook-form";
+import toast from "react-hot-toast";
 
 const ContactForm = () => {
+  const [spinner, setSpinner] = useState(false);
+  const navigate = useNavigate();
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+    reset,
+  } = useForm();
+
+  const onSubmit = async (values) => {
+    setSpinner(true);
+
+    var emailBody = "Name: " + values.fullName + "\n\n";
+    emailBody += "Email: " + values.email + "\n\n";
+    emailBody += "Phone: " + values.phone + "\n\n";
+    emailBody += "Message:\n" + values.message;
+
+    // Construct the request payload
+    var payload = {
+      to: companyDetails.email,
+      name: "Skylytics",
+      subject: "Lead form details",
+      body: emailBody,
+    };
+
+    await fetch(
+      "https://send-mail-redirect-boostmysites.vercel.app/send-email",
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(payload),
+      }
+    )
+      .then((response) => response.json())
+      .then((res) => {
+        if (res.error) {
+          toast.error(res.error);
+        } else {
+          toast.success("Email sent successfully");
+          reset();
+          navigate("/thank-you");
+        }
+      })
+      .catch((error) => {
+        toast.error(error.message);
+      })
+      .finally(() => setSpinner(false));
+  };
+
   return (
     <div id="contact" className="wrapper pt-[5rem]">
       <div className="grid md:grid-cols-[55%_auto] gap-7">
@@ -49,36 +102,72 @@ const ContactForm = () => {
             </div>
           </div>
         </div>
-        <form data-aos="fade-up" className="bg-primary p-7 space-y-3">
+        <form
+          data-aos="fade-up"
+          className="bg-primary p-7 space-y-3"
+          onSubmit={handleSubmit(onSubmit)}
+        >
           <div>
             <input
               type="text"
               className="w-full p-2 bg-primary-5 outline-none"
               placeholder="Full Name*"
+              {...register("fullName", { required: "Full Name is required" })}
             />
+            {errors.fullName && (
+              <p className="text-red-500 text-sm">{errors.fullName.message}</p>
+            )}
           </div>
           <div>
             <input
               type="email"
               className="w-full p-2 bg-primary-5 outline-none"
               placeholder="Email*"
+              {...register("email", {
+                required: "Email is required",
+                pattern: {
+                  value: /^\S+@\S+\.\S+$/,
+                  message: "Enter a valid email",
+                },
+              })}
             />
+            {errors.email && (
+              <p className="text-red-500 text-sm">{errors.email.message}</p>
+            )}
           </div>
           <div>
             <input
-              type="text"
+              type="tel"
               className="w-full p-2 bg-primary-5 outline-none"
-              placeholder="Subject*"
+              placeholder="Phone Number*"
+              {...register("phone", {
+                required: "Phone number is required",
+                minLength: {
+                  value: 10,
+                  message: "Enter a valid phone number",
+                },
+              })}
             />
+            {errors.phone && (
+              <p className="text-red-500 text-sm">{errors.phone.message}</p>
+            )}
           </div>
           <div>
             <textarea
               rows="5"
               className="w-full p-2 bg-primary-5 outline-none"
               placeholder="Message*"
+              {...register("message", { required: "Message cannot be empty" })}
             />
+            {errors.message && (
+              <p className="text-red-500 text-sm">{errors.message.message}</p>
+            )}
           </div>
-          <button type="button" className="secondary-btn w-full">
+          <button
+            disabled={spinner}
+            type="submit"
+            className="secondary-btn w-full"
+          >
             Request A Quote
           </button>
         </form>

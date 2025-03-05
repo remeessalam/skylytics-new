@@ -51,6 +51,7 @@ export { logo };
 
 export const companyDetails = {
   email: "SKYLYTICStechnologies@gmail.com",
+  // email: "remeesreme4u@gmail.com",
   phone: "+91-9686612171",
   address:
     "SBB Diamond , Hoodi Main road , Ayyappa Nagar, Krpuram. Banglore 560036 Karnataka",
@@ -60,34 +61,53 @@ export const companyDetails = {
   linkedin: "https://www.linkedin.com/",
 };
 
+export const navItems = [
+  { label: "Home", path: "/", extraClasses: "hover:text-blue-400 " },
+  { label: "About", path: "/about-us", extraClasses: "hover:text-blue-400" },
+  { label: "Services", path: "/services", extraClasses: "hover:text-blue-400" },
+
+  {
+    label: "Blogs",
+    path: "/blogs",
+    extraClasses: "hover:text-blue-400",
+  },
+
+  {
+    label: "Contact Us",
+    path: "/contact-us",
+    extraClasses:
+      "bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700",
+  },
+];
+
 export const testimonials = [
   {
     name: "Arjun Mehta",
-    designation: "CEO, Tech Innovators",
+    designation: "COO, LogiChain Solutions",
     image: require("../assets/images/testimonial/2.jpg"),
     review:
-      "The team at Skylytics Pvt Ltd delivered a tailored web development solution that exceeded our expectations. Their attention to detail and innovative approach helped us create a highly engaging website. They were professional, met all deadlines, and provided exceptional post-launch support. We're thrilled with the results and how it positively impacted our online presence.",
+      "Skylytics transformed our operations with their custom software solution. The tailored platform streamlined our workflow and increased productivity by 40% within the first month! Their team was professional, innovative, and delivered beyond our expectations.",
   },
   {
-    name: "Priya Sharma",
-    designation: "Product Manager, Appify Co.",
+    name: "Meera Joshi",
+    designation: "CTO, FinTech Innovations",
     image: require("../assets/images/testimonial/1.jpg"),
     review:
-      "Working with Skylytics Pvt Ltd on our app development was a fantastic experience. They delivered a user-friendly app on time that exceeded our expectations. The team was highly responsive and flexible, and the final product was polished and ready for launch. We couldn’t be more pleased with the outcome.",
+      "The full-stack web application developed by Skylytics was a game-changer for our business. Their seamless integration with our existing systems and attention to detail made the entire process smooth and efficient. We’re thrilled with the results!",
   },
   {
-    name: "Ravi Patel",
-    designation: "Founder, AI Ventures",
+    name: "Rohan Kapoor",
+    designation: "Product Lead, HealthTrack",
     image: require("../assets/images/testimonial/3.jpg"),
     review:
-      "Skylytics Pvt Ltd’s AI development team delivered a cutting-edge solution that significantly improved our efficiency. Their expertise in AI and understanding of our business needs helped us automate key processes, providing valuable insights. The solution has been a major boost to our operations.",
+      "Skylytics developed a mobile app that achieved 100k downloads in the first quarter. The user experience is flawless across both iOS and Android platforms. Their team was responsive, creative, and delivered a polished product on time.",
   },
   {
-    name: "Arun Nair",
-    designation: "CTO, CodeWorks Inc.",
+    name: "Vikram Singh",
+    designation: "AI Architect, RetailPlus",
     image: require("../assets/images/testimonial/4.jpg"),
     review:
-      "The software development services from Skylytics Pvt Ltd were top-notch. They understood our requirements perfectly and delivered a high-quality, scalable solution on time. Their team was professional, responsive, and ensured that the product met all our expectations. We’re very satisfied with the result.",
+      "The AI solution implemented by Skylytics revolutionized our customer service. Response times improved by 70% while maintaining 98% satisfaction rates. Their expertise in AI and machine learning was evident throughout the project.",
   },
 ];
 
