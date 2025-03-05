@@ -30,17 +30,19 @@ const Portfolio = ({ page }) => {
                 key={item.title}
                 className="w-full flex flex-col items-center bg-primary hover:bg-secondary hover:scale-x-105 transition-all duration-300 text-white px-5 py-7 gap-3 rounded-md"
               >
-                {data.icon}
+                {/* {data.icon} */}
+                <img src={item.img} alt="" />
+
                 <h3 className="text-lg font-medium text-center">
                   {item.title}
                 </h3>
-                <Link
+                {/* <Link
                   target="_blank"
                   to={item.link}
                   className="flex items-center gap-2 hover:underline"
                 >
                   <IoIosLink /> <small>Visit</small>
-                </Link>
+                </Link> */}
               </div>
             ))}
           </div>
