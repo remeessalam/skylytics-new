@@ -74,6 +74,20 @@ const ContactUs = () => {
               </Link>
             </div>
           </div>
+          <div data-aos="fade-up" className="flex gap-3 sm:justify-center">
+            <div className="bg-primary h-full aspect-square flex justify-center items-center p-3">
+              <IoMail size={25} className="text-white" />
+            </div>
+            <div className="flex flex-col capitalize">
+              <p className="">Email to get free Quote</p>
+              <Link
+                to={`mailto:${companyDetails.email2}`}
+                className="font-semibold text-primary"
+              >
+                {companyDetails.email2}
+              </Link>
+            </div>
+          </div>
         </div>
         <div
           data-aos="fade-up"

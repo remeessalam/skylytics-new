@@ -1,10 +1,10 @@
 import React from "react";
 import banner from "../assets/images/banners/blogs.webp";
 import PageBanner from "../Components/Website/PageBanner";
-import { blogs } from "../Components/Website/BlogsSection";
 import BlogItem from "../Components/Website/BlogItem";
 import HrLine from "../Components/HrLine";
 import ContactForm from "../Components/ContactForm";
+import { blogs } from "../data/blogs";
 
 const Blogs = () => {
   return (
@@ -15,9 +15,7 @@ const Blogs = () => {
           data-aos="fade-up"
           className="space-y-4 flex flex-col md:items-center md:text-center"
         >
-          <p className="uppercase text-primary">
-            Blogs
-          </p>
+          <p className="uppercase text-primary">Blogs</p>
           <h3 className="section-heading">
             Discover Cutting-Edge AI and IT Service Strategies
           </h3>
