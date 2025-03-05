@@ -188,7 +188,7 @@ const ContactForm = () => {
             type="submit"
             className="secondary-btn w-full"
           >
-            Request A Quote
+            {spinner ? "Sending..." : "Request A Quote"}
           </button>
         </form>
       </div>

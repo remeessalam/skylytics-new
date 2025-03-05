@@ -1,9 +1,15 @@
 import React from "react";
-import { logo, services } from "../../data/constant";
+import { companyDetails, logo, services } from "../../data/constant";
 import { websiteLinks } from "./Header";
 import { Link } from "react-router-dom";
-import { FaFacebookF, FaInstagram, FaLinkedinIn } from "react-icons/fa";
+import {
+  FaFacebookF,
+  FaInstagram,
+  FaLinkedinIn,
+  FaYoutube,
+} from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
+import { SiMedium } from "react-icons/si";
 
 const Footer = () => {
   return (
@@ -48,21 +54,45 @@ const Footer = () => {
             </ul>
           </div>
           <div className="flex gap-4 lg:justify-end">
-            <Link className="w-7 h-7 flex hover:bg-secondary transition-all duration-200 justify-center items-center rounded-full border border-white">
+            <Link
+              to={companyDetails.linkedin}
+              className="w-7 h-7 flex hover:bg-secondary transition-all duration-200 justify-center items-center rounded-full border border-white"
+            >
               <FaLinkedinIn className="fill-white" size={16} strokeWidth={1} />
             </Link>
-            <Link className="w-7 h-7 flex hover:bg-secondary transition-all duration-200 justify-center items-center rounded-full border border-white">
+            <Link
+              to={companyDetails.instagram}
+              className="w-7 h-7 flex hover:bg-secondary transition-all duration-200 justify-center items-center rounded-full border border-white"
+            >
               <FaInstagram
                 className="fill-white text-secondary"
                 size={16}
                 strokeWidth={1}
               />
             </Link>
-            <Link className="w-7 h-7 flex hover:bg-secondary transition-all duration-200 justify-center items-center rounded-full border border-white">
+            <Link
+              to={companyDetails.facebook}
+              className="w-7 h-7 flex hover:bg-secondary transition-all duration-200 justify-center items-center rounded-full border border-white"
+            >
               <FaFacebookF className="fill-white" size={16} strokeWidth={1} />
             </Link>
-            <Link className="w-7 h-7 flex hover:bg-secondary transition-all duration-200 justify-center items-center rounded-full border border-white">
+            <Link
+              to={companyDetails.x}
+              className="w-7 h-7 flex hover:bg-secondary transition-all duration-200 justify-center items-center rounded-full border border-white"
+            >
               <FaXTwitter className="fill-white" size={16} strokeWidth={1} />
+            </Link>
+            <Link
+              to={companyDetails.medium}
+              className="w-7 h-7 flex hover:bg-secondary transition-all duration-200 justify-center items-center rounded-full border border-white"
+            >
+              <SiMedium className="fill-white" size={16} strokeWidth={1} />
+            </Link>
+            <Link
+              to={companyDetails.youtube}
+              className="w-7 h-7 flex hover:bg-secondary transition-all duration-200 justify-center items-center rounded-full border border-white"
+            >
+              <FaYoutube className="fill-white" size={16} strokeWidth={1} />
             </Link>
           </div>
         </div>

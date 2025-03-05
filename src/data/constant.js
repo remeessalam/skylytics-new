@@ -50,15 +50,17 @@ import { AiFillAppstore } from "react-icons/ai";
 export { logo };
 
 export const companyDetails = {
-  email: "skylyticstechnologies@gmail.com",
-  // email: "remeesreme4u@gmail.com",
+  // email: "skylyticstechnologies@gmail.com",
+  email: "remeesreme4u@gmail.com",
   phone: "+91-9686612171",
   address:
     "SBB Diamond , Hoodi Main road , Ayyappa Nagar, Krpuram. Banglore 560036 Karnataka",
   instagram: "https://www.instagram.com/skylyticstechnologies",
   x: "https://x.com/Skylytics",
-  facebook: "https://www.facebook.com/",
+  facebook: "https://www.facebook.com/profile.php?id=61572830724351",
   linkedin: "https://www.linkedin.com/",
+  medium: "https://medium.com/@skylyticstechnologies",
+  youtube: "https://www.youtube.com/@skylyticstechnologies",
   whatsapplink:
     "https://api.whatsapp.com/send/?phone=9686612171&text&type=phone_number&app_absent=0",
 };

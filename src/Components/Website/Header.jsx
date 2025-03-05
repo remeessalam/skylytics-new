@@ -5,9 +5,15 @@ import { Divide as Hamburger } from "hamburger-react";
 import Drawer from "react-modern-drawer";
 import "react-modern-drawer/dist/index.css";
 import { IoClose, IoMail } from "react-icons/io5";
-import { FaFacebookF, FaInstagram, FaLinkedinIn } from "react-icons/fa";
+import {
+  FaFacebookF,
+  FaInstagram,
+  FaLinkedinIn,
+  FaYoutube,
+} from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 import { ImPhone } from "react-icons/im";
+import { SiMedium } from "react-icons/si";
 
 export const websiteLinks = [
   { id: 1, name: "Home", path: "/" },
@@ -39,21 +45,45 @@ const Header = () => {
             </div>
           </div>
           <div className="flex items-center gap-4">
-            <Link className="w-7 h-7 flex hover:bg-primary transition-all duration-200 justify-center items-center rounded-full border border-white">
+            <Link
+              to={companyDetails.linkedin}
+              className="w-7 h-7 flex hover:bg-primary transition-all duration-200 justify-center items-center rounded-full border border-white"
+            >
               <FaLinkedinIn className="fill-white" size={16} strokeWidth={1} />
             </Link>
-            <Link className="w-7 h-7 flex hover:bg-primary transition-all duration-200 justify-center items-center rounded-full border border-white">
+            <Link
+              to={companyDetails.instagram}
+              className="w-7 h-7 flex hover:bg-primary transition-all duration-200 justify-center items-center rounded-full border border-white"
+            >
               <FaInstagram
                 className="fill-white text-secondary"
                 size={16}
                 strokeWidth={1}
               />
             </Link>
-            <Link className="w-7 h-7 flex hover:bg-primary transition-all duration-200 justify-center items-center rounded-full border border-white">
+            <Link
+              to={companyDetails.facebook}
+              className="w-7 h-7 flex hover:bg-primary transition-all duration-200 justify-center items-center rounded-full border border-white"
+            >
               <FaFacebookF className="fill-white" size={16} strokeWidth={1} />
             </Link>
-            <Link className="w-7 h-7 flex hover:bg-primary transition-all duration-200 justify-center items-center rounded-full border border-white">
+            <Link
+              to={companyDetails.x}
+              className="w-7 h-7 flex hover:bg-primary transition-all duration-200 justify-center items-center rounded-full border border-white"
+            >
               <FaXTwitter className="fill-white" size={16} strokeWidth={1} />
+            </Link>
+            <Link
+              to={companyDetails.medium}
+              className="w-7 h-7 flex hover:bg-primary transition-all duration-200 justify-center items-center rounded-full border border-white"
+            >
+              <SiMedium className="fill-white" size={16} strokeWidth={1} />
+            </Link>
+            <Link
+              to={companyDetails.youtube}
+              className="w-7 h-7 flex hover:bg-primary transition-all duration-200 justify-center items-center rounded-full border border-white"
+            >
+              <FaYoutube className="fill-white" size={16} strokeWidth={1} />
             </Link>
           </div>
         </div>

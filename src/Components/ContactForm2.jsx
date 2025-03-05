@@ -154,7 +154,7 @@ const ContactForm2 = () => {
         )}
       </div>
       <button disabled={spinner} type="submit" className="primary-btn">
-        Send Message
+        {spinner ? "Sending..." : "Send Message"}
       </button>
     </form>
   );
