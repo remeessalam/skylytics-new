@@ -38,7 +38,9 @@ const LandingPage = ({ page }) => {
             data-aos="fade-up"
             className="wrapper flex flex-col text-center text-white gap-5 justify-center h-full"
           >
-            <p className="section-heading">Welcome to Skylytics Pvt Ltd</p>
+            <p className="section-heading">
+              Welcome to skylytics technologies llp
+            </p>
             <h1 className="heading">
               {isWeb
                 ? "Websites Designed to Engage, Convert, and Delight"
@@ -214,8 +216,8 @@ const LandingPage = ({ page }) => {
             <HrLine />
             <p>
               {isWeb
-                ? "At Skylytics Pvt Ltd, we specialize in creating high-performance, user-centric websites that deliver exceptional results. From conceptualization to deployment, our expert team provides innovative web development solutions that empower businesses to expand their digital presence, engage customers, and drive growth."
-                : "Skylytics Pvt Ltd offers comprehensive mobile app development services that deliver tailored, seamless, and intuitive solutions. From ideation to launch, we create innovative mobile apps that empower businesses to enhance user experiences, drive engagement, and scale globally."}
+                ? "At skylytics technologies llp, we specialize in creating high-performance, user-centric websites that deliver exceptional results. From conceptualization to deployment, our expert team provides innovative web development solutions that empower businesses to expand their digital presence, engage customers, and drive growth."
+                : "skylytics technologies llp offers comprehensive mobile app development services that deliver tailored, seamless, and intuitive solutions. From ideation to launch, we create innovative mobile apps that empower businesses to enhance user experiences, drive engagement, and scale globally."}
             </p>
             <div className="grid grid-cols-2 gap-5 pt-5">
               {[
