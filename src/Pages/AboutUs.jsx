@@ -21,7 +21,7 @@ const AboutUs = () => {
           </h3>
           <HrLine />
           <p>
-            At skylytics technologies llp., our vision is to be the global
+            At Skylytics Technologies LLP., our vision is to be the global
             leader in providing innovative IT solutions that drive digital
             transformation and business growth. We aim to empower businesses
             worldwide by delivering cutting-edge technologies that unlock new

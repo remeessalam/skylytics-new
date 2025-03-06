@@ -29,7 +29,7 @@ const Home = () => {
             className="wrapper flex flex-col text-center text-white gap-5 justify-center h-full"
           >
             <p className="section-heading">
-              Welcome to skylytics technologies llp
+              Welcome to Skylytics Technologies LLP
             </p>
             <h1 className="heading">Your Ultimate IT Solution Provider</h1>
             <div className="flex sm:flex-row flex-col justify-center gap-5 mt-5">
@@ -157,7 +157,7 @@ const Home = () => {
             </h3>
             <HrLine />
             <p>
-              skylytics technologies llp is an Indian IT company that
+              Skylytics Technologies LLP is an Indian IT company that
               specializes in delivering end-to-end technology solutions to
               businesses across the globe. From strategy to implementation, we
               empower organizations with innovative, cutting-edge solutions that
